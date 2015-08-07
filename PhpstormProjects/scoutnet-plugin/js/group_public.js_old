@@ -1,0 +1,66 @@
+
+var map = null;
+var geocoder = null;
+var marker;
+
+
+function createMarker(point,title) {
+	var m_shadow = new google.maps.MarkerImage(templateDir +'img/m_shadow.png', new google.maps.Size(22, 20), new google.maps.Point(0,0), new google.maps.Point(6, 20));
+	var m_red = new google.maps.MarkerImage(templateDir + 'img/m_red.png', new google.maps.Size(12, 20), new google.maps.Point(0,0), new google.maps.Point(6, 20));
+	
+	if ( marker ) {
+		marker.setPosition(point);
+	} else {
+		marker = new google.maps.Marker({
+		position: point,
+		map: map,
+		shadow: m_shadow,
+		icon: m_red,
+		draggable: false,
+		crossOnDrag: true,
+		title: title
+		});
+	}
+	
+	return marker;
+}
+
+
+function load() {
+
+if (jQuery("#map").length > 0){
+map = new google.maps.Map(
+	document.getElementById('map'), {
+	center: new google.maps.LatLng(50.9272, 4.3176),
+	zoom: 7,
+	zoomControl: 1,
+	scaleControl: 1,
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+
+geocoder = new google.maps.Geocoder();
+
+
+google.maps.event.addListener(map, 'click', function(event) {
+  createMarker(event.latLng,'Hier gaat onze werking door');
+});
+
+
+mylocation = new google.maps.LatLng(document.getElementById("lat").value, document.getElementById("lng").value)
+
+if (mylocation){
+createMarker(mylocation, 'Hier gaat onze werking door');
+}
+
+}
+
+
+}
+
+
+
+jQuery(document).ready(function() {
+
+	load();
+
+});

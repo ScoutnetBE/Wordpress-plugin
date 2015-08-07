@@ -1,0 +1,38 @@
+var map = null;
+
+function loadMap(){
+
+var m_shadow = new google.maps.MarkerImage(templateDir +'img/m_shadow.png', new google.maps.Size(22, 20), new google.maps.Point(0,0), new google.maps.Point(6, 20));
+var m_red = new google.maps.MarkerImage(templateDir + 'img/m_red.png', new google.maps.Size(12, 20), new google.maps.Point(0,0), new google.maps.Point(6, 20));
+
+var lat = document.getElementById("lat").value;
+var lng = document.getElementById("lng").value;
+
+point = new google.maps.LatLng(lat, lng);
+
+map = new google.maps.Map(
+	document.getElementById('map'), {
+	center: point,
+	zoom: 13,
+	zoomControl: 1,
+	scaleControl: 1,
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+});
+
+var marker = new google.maps.Marker({
+	position: point,
+	map: map,
+	shadow: m_shadow,
+	icon: m_red,
+	title: "Ons lokaal"
+});
+
+setTimeout('document.getElementById("map").style.backgroundImage = "";',1000); 
+}
+
+function activateMap(){
+	var script = document.createElement("script");
+	script.setAttribute("src", "http://maps.googleapis.com/maps/api/js?key=AIzaSyCwvKXGLUemghNxHVuYoiH8wEkoFfbVSgs&sensor=false&callback=loadMap");
+	script.setAttribute("type", "text/javascript");
+	document.documentElement.firstChild.appendChild(script);
+}

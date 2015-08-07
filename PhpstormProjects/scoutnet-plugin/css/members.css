@@ -1,0 +1,126 @@
+table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(img/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(img/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(img/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+#frmlidwijzigen label {
+    display: inline-block;
+    width: 150px;
+}
+
+#frmlidwijzigen input {
+	margin-bottom: 10px;
+	margin-right: 5px;
+}
+
+span.notatie {
+	color: #2F6073;
+	font-size: 90%;
+	font-weight: bold;
+}
+
+div.snspacer {
+    clear: both;
+}
+
+#container_st {
+  width: 600px;
+}
+
+#container_st div {
+  float: left;
+  width: 300px;
+}
+
+.testresult {
+    color: #666666;
+    display: block;
+    float: left;
+    font-family: arial,helvetica,san-serif;
+    font-size: 13px;
+    font-weight: bold;
+    height: 11px;
+    margin-left: 10px;
+    padding: 0 0 12px 10px;
+}
+.testresult span {
+    display: block;
+    float: right;
+    margin: 0 0 0 20px;
+    padding: 3px 20px 6px 10px;
+    white-space: nowrap;
+}
+
+.shortPass {
+    background: url("img/pw_strength_red.png") no-repeat scroll 0 0 transparent;
+}
+.shortPass span {
+    background: url("img/pw_strength_red.png") no-repeat scroll right top transparent;
+}
+.badPass {
+    background: url("img/pw_strength_red.png") no-repeat scroll 0 0 transparent;
+}
+.badPass span {
+    background: url("img/pw_strength_red.png") no-repeat scroll right top transparent;
+}
+.goodPass {
+    background: url("img/pw_strength_yellow.png") no-repeat scroll 0 0 transparent;
+}
+.goodPass span {
+    background: url("img/pw_strength_yellow.png") no-repeat scroll right top transparent;
+}
+.strongPass {
+    background: url("img/pw_strength_green.png") no-repeat scroll 0 0 transparent;
+}
+.strongPass span {
+    background: url("img/pw_strength_green.png") no-repeat scroll right top transparent;
+}
+
+.sourcecode {
+	font-size: 9pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	background-color : #F2F2F2;
+}
+
+fieldset {
+	border:1px solid #333;
+	border-bottom:1px solid #666;
+	border-right:1px solid #666;
+	padding: 7px 5px;
+	margin-right: 10px;
+}
